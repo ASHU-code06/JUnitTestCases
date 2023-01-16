@@ -20,4 +20,17 @@ public class UserRegisterationTest {
         String re= obj.is_valid_name("ashi");
         Assertions.assertEquals("invalid",re);
     }
+    @Test
+    public void should_Enter_lastName_As_Per_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Lastname("as45");
+        Assertions.assertEquals("invalid",re);
+    }
+    @Test
+    public void should_Enter_lastName_According_to_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Lastname("Chauhan");
+        Assertions.assertEquals("valid",re);
+    }
+
 }

@@ -4,12 +4,24 @@ import java.util.regex.Pattern;
 import java.util.Scanner;
 public class UserRegisterationProblem {
     public String is_valid_name(String firstname){
+        String result="false";
+        Pattern p = Pattern.compile(("[A-Z]{1}[a-z]{3,}$"));
+        Matcher m = p.matcher(firstname);
+        boolean b = m.matches();
+        System.out.println("so, it is "+b);
+        if (b){
+            result="valid";
+        }else {
+            result="invalid";
+        }
+        return result;
+    }
+    public String is_valid_Lastname(String lname){
      String result="false";
-    Pattern p = Pattern.compile(("[A-Z]{1}[a-z]{3,}$"));
-    Matcher m = p.matcher(firstname);
-    boolean b = m.matches();
-    System.out.println("so, it is "+b);
-    if (b){
+     Pattern pat = Pattern.compile(("^[A-Z]{1}[a-z]{2,}$"));
+     Matcher mat = pat.matcher(lname);
+     boolean c = mat.matches();
+     if (c){
         result="valid";
     }else {
         result="invalid";
