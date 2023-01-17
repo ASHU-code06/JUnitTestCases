@@ -30,8 +30,20 @@ public class UserRegisterationProblem {
     }
     public String is_valid_Email(String email) {
         String result = "false";
-        Pattern patemail = Pattern.compile(("^[A-Za-z0-9+-._]{0,}@[A-Za-z0-9+-._]{0,}[.][com|in]{2,3}$"));
+        Pattern patemail = Pattern.compile("^[^.][A-Za-z0-9+-.]{1,}@[A-Za-z0-9+_-]{0,}[.][com|in|au|net]{1,3}[.]{0,1}[com|in|au|net]{1,3}$");
         Matcher matemail = patemail.matcher(email);
+        boolean d = matemail.matches();
+        if (d) {
+            result = "valid";
+        } else {
+            result = "invalid";
+        }
+        return result;
+    }
+    public String is_valid_Phonenumber(String phonenum) {
+        String result = "false";
+        Pattern patemail = Pattern.compile(("^[91]{2}[0-9]{10}$"));
+        Matcher matemail = patemail.matcher(phonenum);
         boolean d = matemail.matches();
         if (d) {
             result = "valid";

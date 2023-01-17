@@ -41,8 +41,21 @@ public class UserRegisterationTest {
     @Test
     public void should_Enter_Email_According_to_Pattern(){
         UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Phonenumber("917011275754");
+        Assertions.assertEquals("valid",re);
+    }
+    @Test
+    public void should_Enter_Phonenum_As_Per_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Phonenumber("456554665454656");
+        Assertions.assertEquals("invalid",re);
+    }
+    @Test
+    public void should_Enter_Phonemun_According_to_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
         String re= obj.is_valid_Email("ashuc306@gmail.com");
         Assertions.assertEquals("valid",re);
     }
+
 
 }
