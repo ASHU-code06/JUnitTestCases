@@ -56,6 +56,18 @@ public class UserRegisterationTest {
         String re= obj.is_valid_Email("ashuc306@gmail.com");
         Assertions.assertEquals("valid",re);
     }
+    @Test
+    public void should_Enter_Password_As_Per_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Password(".as45@popcorn");
+        Assertions.assertEquals("invalid",re);
+    }
+    @Test
+    public void should_Enter_Password_According_to_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Password("Kunal@123");
+        Assertions.assertEquals("valid",re);
+    }
 
 
 }

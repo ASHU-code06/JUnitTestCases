@@ -42,9 +42,21 @@ public class UserRegisterationProblem {
     }
     public String is_valid_Phonenumber(String phonenum) {
         String result = "false";
-        Pattern patemail = Pattern.compile(("^[91]{2}[0-9]{10}$"));
-        Matcher matemail = patemail.matcher(phonenum);
-        boolean d = matemail.matches();
+        Pattern patenum = Pattern.compile(("^[91]{2}[0-9]{10}$"));
+        Matcher matenum = patenum.matcher(phonenum);
+        boolean d = matenum.matches();
+        if (d) {
+            result = "valid";
+        } else {
+            result = "invalid";
+        }
+        return result;
+}
+    public String is_valid_Password(String phonenum) {
+        String result = "false";
+        Pattern patepass = Pattern.compile(("^(?=.*[a-z]){1,}(?=.*[A-Z]){1,}(?=.*[0-9]){1,}(?=.*[$@$!%*?&])[A-Za-z0-9$@$!%*?&]{5,}$"));
+        Matcher matepass = patepass.matcher(phonenum);
+        boolean d = matepass.matches();
         if (d) {
             result = "valid";
         } else {
