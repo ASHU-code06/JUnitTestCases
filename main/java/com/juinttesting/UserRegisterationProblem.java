@@ -16,4 +16,28 @@ public class UserRegisterationProblem {
     }
     return result;
     }
+    public String is_valid_Lastname(String lname) {
+        String result = "false";
+        Pattern pat = Pattern.compile(("^[A-Z]{1}[a-z]{2,}$"));
+        Matcher mat = pat.matcher(lname);
+        boolean c = mat.matches();
+        if (c) {
+            result = "valid";
+        } else {
+            result = "invalid";
+        }
+        return result;
+    }
+    public String is_valid_Email(String email) {
+        String result = "false";
+        Pattern patemail = Pattern.compile(("^[A-Za-z0-9+-._]{0,}@[A-Za-z0-9+-._]{0,}[.][com|in]{2,3}$"));
+        Matcher matemail = patemail.matcher(email);
+        boolean d = matemail.matches();
+        if (d) {
+            result = "valid";
+        } else {
+            result = "invalid";
+        }
+        return result;
+    }
 }
