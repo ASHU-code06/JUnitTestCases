@@ -32,5 +32,17 @@ public class UserRegisterationTest {
         String re= obj.is_valid_Lastname("Chauhan");
         Assertions.assertEquals("valid",re);
     }
+    @Test
+    public void should_Enter_Email_As_Per_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Email(".as45@popcorn");
+        Assertions.assertEquals("invalid",re);
+    }
+    @Test
+    public void should_Enter_Email_According_to_Pattern(){
+        UserRegisterationProblem obj = new UserRegisterationProblem();
+        String re= obj.is_valid_Email("ashuc306@gmail.com");
+        Assertions.assertEquals("valid",re);
+    }
 
 }
