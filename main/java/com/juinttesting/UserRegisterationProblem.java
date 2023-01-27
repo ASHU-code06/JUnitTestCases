@@ -1,8 +1,10 @@
 package com.juinttesting;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
 public class UserRegisterationProblem {
+
     public String is_valid_name(String firstname){
         String result="false";
         Pattern p = Pattern.compile(("[A-Z]{1}[a-z]{3,}$"));
@@ -29,8 +31,9 @@ public class UserRegisterationProblem {
         return result;
     }
     public String is_valid_Email(String email) {
+
         String result = "false";
-        Pattern patemail = Pattern.compile("^[^.][A-Za-z0-9+-.]{1,}@[A-Za-z0-9+_-]{0,}[.][com|in|au|net]{1,3}[.]{0,1}[com|in|au|net]{1,3}$");
+        Pattern patemail = Pattern.compile("^[^.][A-Za-z+0-9-.]{1,}@[A-Za-z0-9+_-]{0,}[.][com|in|au|net]{1,3}[.]{0,1}[com|in|au|net]{1,3}$");
         Matcher matemail = patemail.matcher(email);
         boolean d = matemail.matches();
         if (d) {
