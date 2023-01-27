@@ -86,7 +86,6 @@ public class UserRegisterationTest {
         for (String emails:al) {
         String re= obj.is_valid_Email(emails);
         Assertions.assertEquals("valid",re);}
-        Assertions.assertTrue();
     }
 
 }
