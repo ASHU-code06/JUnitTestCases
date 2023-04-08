@@ -12,7 +12,7 @@ public class UserRegisterationTest {
     @Test
     public void should_Enter_firstName_According_To_Pattern(){
         UserRegisterationProblem obj = new UserRegisterationProblem();
-        String re= obj.is_valid_name("Ashukuldeep");
+        String re= obj.is_valid_name("Ashu");
         Assertions.assertEquals("valid",re);
     }
     @Test

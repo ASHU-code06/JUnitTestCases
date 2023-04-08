@@ -1,8 +1,10 @@
 package com.juinttesting;
+
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Scanner;
+
 public class UserRegisterationProblem {
 
     public String is_valid_name(String firstname){
