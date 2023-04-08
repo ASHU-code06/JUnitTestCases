@@ -8,7 +8,7 @@ public class UserRegisterationProblem {
     Pattern p = Pattern.compile(("[A-Z]{1}[a-z]{3,}$"));
     Matcher m = p.matcher(firstname);
     boolean b = m.matches();
-    System.out.println("so, it is "+b);
+    System.out.println(" It is "+b);
     if (b){
         result="valid";
     }else {
